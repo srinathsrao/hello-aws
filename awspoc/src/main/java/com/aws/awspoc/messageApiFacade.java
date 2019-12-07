@@ -9,10 +9,12 @@ public class messageApiFacade {
 	
 	
     @PostMapping("/message")
-    public void postSolaceMessage(@RequestBody String solaceMessage) 
+    public void postSolaceMessage(@RequestBody String solaceMessage) throws Exception 
     {
     	
         System.out.println( (String) solaceMessage);
+        messagePoster objPoster= new messagePoster();
+        objPoster.sendTextMessage(solaceMessage);
         
     }
 
