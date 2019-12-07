@@ -21,14 +21,23 @@ public class messageApiFacade {
     {
     	
         System.out.println( (String) solaceMessage);
-//        messagePoster objPoster= new messagePoster();
-//        try {
-//			objPoster.sendTextMessage(solaceMessage);
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//        
+        messagePoster objPoster= new messagePoster();
+        try 
+        {
+        	
+        	System.out.println("Entering inside the block");
+			objPoster.sendTextMessage(solaceMessage);
+			
+		} 
+        
+        
+        catch (Exception e)
+        
+        {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
 		return "Thank you !";
     }
 
