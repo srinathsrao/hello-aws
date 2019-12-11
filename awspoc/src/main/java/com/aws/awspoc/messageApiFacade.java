@@ -21,6 +21,7 @@ public class messageApiFacade {
     {
     	
         System.out.println( (String) solaceMessage);
+        frameworkLogger.debug_logToFile(solaceMessage);
         messagePoster objPoster= new messagePoster();
         try 
         {
