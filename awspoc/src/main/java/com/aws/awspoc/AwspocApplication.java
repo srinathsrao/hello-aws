@@ -9,6 +9,7 @@ public class AwspocApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AwspocApplication.class, args);
+		//Made changes
 	}
 
 }
